@@ -18,7 +18,7 @@ import {
 } from "react-icons/si";
 
 import { GrMysql, GrGraphQl } from "react-icons/gr";
-import { ISkillData } from "../../components/Skill";
+import { ISkillData } from "@/components/feature/home/Technologies";
 
 const SkillsData: ISkillData[] = [
   { name: "JavaScript", icon: DiJsBadge },
