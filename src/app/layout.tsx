@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
+import Row from "@/components/common/Row";
+import Navbar from "@/components/common/Navbar";
+import HeaderSection from "@/components/feature/home/Header";
+import ContactSection from "@/components/feature/home/Contant";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,7 +47,15 @@ export default function RootLayout({
             },
           }}
         />
-        {children}
+        <Row className="flex-col bg-[#e1ebed]">
+          <Row className="flex-col w-full">
+            <Navbar className="" />
+            <HeaderSection />
+          </Row>
+
+          <Row className="w-[98%] md:w-[90%] mt-4">{children}</Row>
+          <ContactSection />
+        </Row>
       </body>
     </html>
   );

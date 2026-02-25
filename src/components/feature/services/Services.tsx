@@ -17,14 +17,16 @@ interface IServicesSectionProps {
 }
 const ServicesSection: React.FC<IServicesSectionProps> = ({ services }) => {
   return (
-    <Row id="service" className="w-full justify-center  bg-[#e1ebed]">
-      <Row className="px-2 md:px-0 w-[98%] md:w-[90%] flex-col justify-between items-center gap-4">
+    <Row id="service" className="w-full justify-center">
+      <Row className="px-2 md:px-0 w-full flex-col justify-between items-center gap-4">
         <Row className="items-center gap-3 text-[#291c3a]">
           <AnimatedIcon Icon={PiDiamondsFourFill} />
 
           <Row className="flex-col gap-2 items-start md:items-center">
             <TextElement as="h2">Services</TextElement>
-            <TextElement as="p">I provide a range of services to help you achieve your goals</TextElement>
+            <TextElement as="p">
+              I provide a range of services to help you achieve your goals
+            </TextElement>
           </Row>
         </Row>
 

@@ -72,14 +72,15 @@ const ContactSection: React.FC<IContactSectionProps> = ({}) => {
   return (
     <Row
       id="contact"
-      className=" w-full justify-center mt-4 pt-3 pb-0 md:py-4 bg-[#fff] "
+      className=" w-full justify-center mt-4 pt-3 pb-0 md:py-4 bg-white"
     >
       <Row className="mb-4 px-2 md:px-0 w-[98%] md:w-[90%] flex-col justify-between items-center  gap-4 ">
         <Row className=" items-center gap-3 text-[#291c3a]">
-          <AnimatedIcon Icon={MdConnectWithoutContact} />
-
           <Row className="flex-col gap-2 items-start md:items-center">
-            <TextElement as="h2">Contact</TextElement>
+            <Row className="gap-2">
+              <AnimatedIcon Icon={MdConnectWithoutContact} />
+              <TextElement as="h2">Contact</TextElement>
+            </Row>
 
             <TextElement as="p">
               Let's discuss on something cool together

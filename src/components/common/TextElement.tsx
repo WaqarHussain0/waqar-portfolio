@@ -22,17 +22,17 @@ const defaultClasses: Record<TextVariants, string> = {
   h1: "text-3xl font-semibold text-foreground font-heading",
   h2: "cotoris  font-semibold capitalize text-[26px] md:text-[36px] border-b-2 border-[#8121d0] text-start",
   h3: "poppins text-[14px] md:text-[18px] lg:text-[20px] font-medium line-clamp-1",
-  h4: " text-md font-body",
-  h5: "font-body text-sm",
-  h6: "font-body",
-  p: "line-clamp-1 poppinsRegular text-[#211F20] text-[10px] md:text-[16px] font-body",
+  h4: " text-md ",
+  h5: " text-sm",
+  h6: "",
+  p: "line-clamp-1 poppinsRegular text-[#211F20] text-[10px] md:text-[16px] ",
   span: "text-red-600 poppinsRegular text-[12px] md:text-[14px]",
-  label: "text-[14px] font-[400] text-[#4D4D4D] font-body",
+  label: "text-[14px] font-[400] text-[#4D4D4D] ",
   blockquote: "",
   small: "",
   strong: "",
   em: "s",
-  a: "text-sm text-blue-800 hover:underline font-body",
+  a: "cursor-pointer text-blue-800 poppinsRegular underline text-[10px] md:text-[16px] ",
 };
 
 interface TextElementProps extends React.HTMLAttributes<HTMLElement> {

@@ -19,13 +19,17 @@ const TechnologiesSection: React.FC<ITechnologiesSectionProps> = ({
   skills,
 }) => {
   return (
-    <Row className="w-full justify-center items-center  bg-[#e1ebed]">
-      <Row className="px-2 md:px-0 w-[98%] md:w-[90%] flex-col justify-between gap-4 items-center   ">
+    <Row className="w-full justify-center items-center">
+      <Row className=" md:px-0 w-full flex-col justify-between gap-4 items-center   ">
         <Row className="items-center gap-3 text-[#291c3a]">
-          <AnimatedIcon Icon={GrTechnology} />
 
           <Row className="flex-col gap-2 items-start md:items-center">
+
+            <Row className="gap-2">
+          <AnimatedIcon Icon={GrTechnology} />
+
             <TextElement as="h2">Technologies</TextElement>
+            </Row>
             <TextElement as="p">I've been working with recently</TextElement>
           </Row>
         </Row>

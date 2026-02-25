@@ -1,7 +1,7 @@
 import { DiReact } from "react-icons/di";
 import { SiNestjs } from "react-icons/si";
 import { FaLaptopCode } from "react-icons/fa6";
-import { IServicePoint } from "@/components/feature/home/Services";
+import { IServicePoint } from "@/components/feature/services/Services";
 
 const ServicesData : IServicePoint[] = [
   {

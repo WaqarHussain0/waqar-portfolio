@@ -28,27 +28,26 @@ const ExperienceSection: React.FC<IExperienceSectionProps> = ({
   experiences,
 }) => {
   return (
-    <Row
-      id="about"
-      className="w-[98%] md:w-[90%] justify-center  bg-[#e1ebed] "
-    >
-      <Row className="px-2 md:px-0 w-full flex-col justify-between items-center gap-4">
+    <Row id="about" className="w-full justify-center">
+      <Row className=" md:px-0 w-full flex-col justify-between items-center gap-4">
         <Row className="items-center gap-3 text-[#291c3a]">
-          <AnimatedIcon Icon={ImOffice} />
+          <Row className="flex-col gap-2">
+            <Row className="gap-2">
+              <AnimatedIcon Icon={ImOffice} />
 
-          <Row className="flex-col gap-2 items-start md:items-center">
-            <TextElement as="h2">Experience</TextElement>
+              <TextElement as="h2">Experience</TextElement>
+            </Row>
             <TextElement as="p">
               My professional journey and work experience
             </TextElement>
           </Row>
         </Row>
 
-        <Row className="w-full flex-col md:flex-row flex-wrap items-start justify-between space-y-3 ">
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-3">
           {experiences.map((company) => (
             <Card
               key={company.companyName}
-              className="w-full  shadow-sm hover:shadow-md px-4 py-6 "
+              className="w-full shadow-sm hover:shadow-md px-4 py-6 "
             >
               <Row className="gap-4">
                 {/* Company Logo */}
@@ -92,7 +91,8 @@ const ExperienceSection: React.FC<IExperienceSectionProps> = ({
                         </CardTitle>
 
                         <CardDescription className="poppinsRegular text-sm">
-                          {role.startDate} - {role.endDate || "Present"}
+                          {role.startDate} -{" "}
+                          {role.endDate ? role.endDate : <span className="text-green-600">Present</span>}
                         </CardDescription>
                       </Row>
                     ))}
@@ -111,7 +111,7 @@ const ExperienceSection: React.FC<IExperienceSectionProps> = ({
               </Row>
             </Card>
           ))}
-        </Row>
+        </div>
       </Row>
     </Row>
   );
