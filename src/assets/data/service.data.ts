@@ -3,38 +3,38 @@ import { SiNestjs } from "react-icons/si";
 import { FaLaptopCode } from "react-icons/fa6";
 import { IServicePoint } from "@/components/feature/services/Services";
 
-const ServicesData : IServicePoint[] = [
+const ServicesData: IServicePoint[] = [
   {
-    heading: "Frontend Development",
+    heading: "Frontend Engineering",
     icon: DiReact,
     points: [
-      "Interactive UI/UX with React",
-      "Single Page Applications (SPA)",
-      "Responsive Design with Tailwind CSS",
-      "State Management with Redux",
-      "Next.js for SSR & SSG",
+      "Scalable React & Next.js applications (App Router)",
+      "Admin dashboards & ERP-style interfaces",
+      "Server-side rendering (SSR) & static generation (SSG)",
+      "Real-time UI updates using WebSockets",
+      "Performance optimization & reusable component architecture",
     ],
   },
   {
-    heading: "Backend Development",
+    heading: "Backend & System Architecture",
     icon: SiNestjs,
     points: [
-      "RESTful APIs with Express",
-      "Real-Time Apps with Socket.IO",
-      "GraphQL API Development",
-      "Database Management (MongoDB, SQL)",
-      "Authentication & Authorization (JWT)",
+      "REST & GraphQL APIs with Node.js / NestJS",
+      "Multi-tenant application architecture",
+      "Role-based access control (RBAC) & JWT authentication",
+      "Real-time systems with WebSockets (event-driven design)",
+      "Database design & optimization (PostgreSQL, MongoDB)",
     ],
   },
   {
-    heading: "Full Stack Development",
+    heading: "Full Stack Product Development",
     icon: FaLaptopCode,
     points: [
-      "MERN Stack Web Applications",
-      "Custom Web Solutions",
-      "E-commerce Solutions Development",
-      "Real-Time Features (Chats, Notifications)",
-      "Version Control with Git",
+      "End-to-end MERN stack SaaS & ERP platforms",
+      "Healthcare & HIPAA-aware systems",
+      "Construction ERP & workflow automation tools",
+      "Real-time analytics & scoring engines",
+      "Deployment-ready production setups (Docker, CI/CD)",
     ],
   },
 ];

@@ -5,6 +5,7 @@ import { PiDiamondsFourFill } from "react-icons/pi";
 import AnimatedIcon from "@/components/common/AnimatedIcon";
 import TextElement from "@/components/common/TextElement";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
+import { FaRegCircleCheck } from "react-icons/fa6";
 
 export interface IServicePoint {
   heading: string;
@@ -15,6 +16,7 @@ export interface IServicePoint {
 interface IServicesSectionProps {
   services: IServicePoint[];
 }
+
 const ServicesSection: React.FC<IServicesSectionProps> = ({ services }) => {
   return (
     <Row id="service" className="w-full justify-center">
@@ -34,10 +36,10 @@ const ServicesSection: React.FC<IServicesSectionProps> = ({ services }) => {
           {services.map((service) => (
             <Card
               key={service.heading}
-              className="px-3 shadow-sm hover:shadow-md gap-0"
+              className="px-3 shadow-sm gap-0 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             >
               <Row className="w-full items-center justify-between">
-                <CardTitle className="text-[#291c3a] poppins font-medium line-clamp-1">
+                <CardTitle className="text-[#291c3a] poppins font-medium">
                   {service.heading}
                 </CardTitle>
 
@@ -46,11 +48,11 @@ const ServicesSection: React.FC<IServicesSectionProps> = ({ services }) => {
                 </div>
               </Row>
 
-              <Row className="flex-col gap-2">
+              <Row className="w-full flex-col gap-2 mt-3">
                 {service.points.map((point, idx) => (
-                  <Row key={idx} className="items-center w-full">
-                    <TbPoint size={25} className="text-[#291c3a]" />
-                    <CardDescription className="line-clamp-1 poppinsRegular ">
+                  <Row key={idx} className="items-center w-full gap-2">
+                    <FaRegCircleCheck className="mt-1 text-green-600 shrink-0" />
+                    <CardDescription className="poppinsRegular ">
                       {point}
                     </CardDescription>
                   </Row>

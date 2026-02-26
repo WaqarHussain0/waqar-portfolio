@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <Row className="w-full justify-center max:h-[27vh] md:h-[70vh]  bg-[#291c3a] relative overflow-hidden">
+    <Row className="w-full justify-center max:h-[27vh] md:h-[70vh] relative overflow-hidden">
       <Row className="w-[90%]   justify-between items-center ">
         <Row className=" w-[65%] md:w-[60%] items-end  pl-2 md:pl-3 gap-1 ">
           <AnimatedReact />
@@ -33,7 +33,7 @@ const Banner = () => {
           </Row>
         </Row>
 
-        <div className=" w-[35%]  md:w-[40%] rounded-sm overflow-hidden ">
+        <div className=" w-[35%]  md:w-[40%] rounded-sm overflow-hidden">
           <Image
             src="/waqar.png"
             alt="Profile Pic"

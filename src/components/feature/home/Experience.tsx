@@ -43,11 +43,11 @@ const ExperienceSection: React.FC<IExperienceSectionProps> = ({
           </Row>
         </Row>
 
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {experiences.map((company) => (
             <Card
               key={company.companyName}
-              className="w-full shadow-sm hover:shadow-md px-4 py-6 "
+              className="w-full shadow-sm  px-4 py-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             >
               <Row className="gap-4">
                 {/* Company Logo */}
@@ -92,7 +92,11 @@ const ExperienceSection: React.FC<IExperienceSectionProps> = ({
 
                         <CardDescription className="poppinsRegular text-sm">
                           {role.startDate} -{" "}
-                          {role.endDate ? role.endDate : <span className="text-green-600">Present</span>}
+                          {role.endDate ? (
+                            role.endDate
+                          ) : (
+                            <span className="text-green-600">Present</span>
+                          )}
                         </CardDescription>
                       </Row>
                     ))}

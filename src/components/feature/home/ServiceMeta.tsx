@@ -36,10 +36,10 @@ const ServiceMeta = () => {
         {services.map((service) => (
           <Card
             key={service.heading}
-            className="px-3 shadow-sm hover:shadow-md gap-0"
+            className="px-3 shadow-sm gap-0 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
           >
             <Row className="w-full items-center justify-between">
-              <CardTitle className="text-[#291c3a] poppins font-medium line-clamp-1">
+              <CardTitle className="text-[#291c3a] poppins font-medium">
                 {service.heading}
               </CardTitle>
 

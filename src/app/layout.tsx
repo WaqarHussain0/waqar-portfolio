@@ -48,7 +48,7 @@ export default function RootLayout({
           }}
         />
         <Row className="flex-col bg-[#e1ebed]">
-          <Row className="flex-col w-full">
+          <Row className="flex-col w-full  bg-[#291c3a]">
             <Navbar className="" />
             <HeaderSection />
           </Row>

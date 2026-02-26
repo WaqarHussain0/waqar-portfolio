@@ -32,7 +32,7 @@ const ProjectSection = () => {
         </Row>
       </Row>
 
-      <Row className="w-full flex-col items-start gap-3">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-3">
         {ProjectsData.map((project) => {
           const isExpanded = expandedId === project.id;
           const visibleContributions = isExpanded
@@ -42,7 +42,7 @@ const ProjectSection = () => {
           return (
             <Card
               key={project.id}
-              className="w-full p-6 gap-3 rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 group"
+              className="w-full p-6 gap-3 rounded-2xl border border-gray-200 shadow-sm group hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             >
               <CardHeader className="p-0 w-full">
                 <Row className="w-full flex-col justify-between items-start gap-2">
@@ -100,7 +100,7 @@ const ProjectSection = () => {
             </Card>
           );
         })}
-      </Row>
+      </div>
     </Row>
   );
 };

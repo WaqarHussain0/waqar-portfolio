@@ -4,7 +4,6 @@ import {
   DiMongodb,
   DiPostgresql,
   DiReact,
-  DiGit,
 } from "react-icons/di";
 
 import {
@@ -18,28 +17,47 @@ import {
 } from "react-icons/si";
 
 import { GrMysql, GrGraphQl } from "react-icons/gr";
-import { ISkillData } from "@/components/feature/home/Technologies";
 
-const SkillsData: ISkillData[] = [
-  { name: "JavaScript", icon: DiJsBadge },
-  { name: "TypeScript", icon: SiTypescript },
+export interface ISkillData {
+  name: string;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+}
 
-  { name: "React", icon: DiReact },
-  { name: "Next", icon: SiNextdotjs },
-  { name: "Redux", icon: SiRedux },
+export interface ISkillCategory {
+  title: string;
+  skills: ISkillData[];
+}
 
-  { name: "Node", icon: DiNodejsSmall },
-  { name: "Express", icon: SiExpress },
-  { name: "NestJS", icon: SiNestjs },
-  { name: "Socket.IO", icon: SiSocketdotio },
-  { name: "GraphQL", icon: GrGraphQl },
-
-  { name: "MongoDB", icon: DiMongodb },
-  { name: "MySQL", icon: GrMysql },
-  { name: "PostgreSQL", icon: DiPostgresql },
-
-  { name: "Git", icon: DiGit },
-  { name: "Tailwind CSS", icon: SiTailwindcss },
+const SkillsData: ISkillCategory[] = [
+  {
+    title: "Frontend",
+    skills: [
+      { name: "JavaScript", icon: DiJsBadge },
+      { name: "TypeScript", icon: SiTypescript },
+      { name: "React", icon: DiReact },
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "Redux", icon: SiRedux },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+    ],
+  },
+  {
+    title: "Backend",
+    skills: [
+      { name: "Node.js", icon: DiNodejsSmall },
+      { name: "Express", icon: SiExpress },
+      { name: "NestJS", icon: SiNestjs },
+      { name: "Socket.IO", icon: SiSocketdotio },
+      { name: "GraphQL", icon: GrGraphQl },
+    ],
+  },
+  {
+    title: "Database",
+    skills: [
+      { name: "MongoDB", icon: DiMongodb },
+      { name: "MySQL", icon: GrMysql },
+      { name: "PostgreSQL", icon: DiPostgresql },
+    ],
+  },
 ];
 
 export default SkillsData;

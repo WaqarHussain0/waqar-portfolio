@@ -37,11 +37,12 @@ const ProjectMeta: React.FC<IProjectMetaProps> = ({ projects }) => {
           View All
         </TextElement>
       </Row>
+
       <div className=" grid grid-cols-1 md:grid-cols-2 gap-3">
         {projects.map((project) => (
           <Card
             key={project.id}
-            className="w-full p-6 gap-3 rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 group"
+            className="w-full p-6 gap-3 rounded-2xl border border-gray-200 shadow-sm  group hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
           >
             <CardHeader className="p-0 w-full ">
               {/* Title + Status + Description*/}

@@ -23,7 +23,7 @@ const Navbar: React.FC<INavbarProps> = ({ className }) => {
   return (
     <Row
       id="/"
-      className={`w-full justify-center items-center py-4 md:py-6 bg-[#291c3a] ${className}`}
+      className={`w-full justify-center items-center py-4 ${className}`}
     >
       <Row className="px-4 md:px-0 w-full justify-between md:justify-center md:gap-28 items-center">
         <Row className="gap-2 md:gap-6">
@@ -42,7 +42,7 @@ const Navbar: React.FC<INavbarProps> = ({ className }) => {
           ))}
         </Row>
 
-        <Button size={"sm"} className="bg-white hover:bg-white/90 text-[#291c3a]">
+        <Button className="cotoris bg-white font-medium hover:bg-white/90 text-[#291c3a]">
           Hire Me
           <AnimatedIcon Icon={BiMessageDots} animateIcon={true} />
         </Button>
