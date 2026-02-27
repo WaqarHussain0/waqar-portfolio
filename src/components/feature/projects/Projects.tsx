@@ -71,7 +71,7 @@ const ProjectSection = () => {
                   {visibleContributions.map((item, index) => (
                     <Row key={index} className="w-full gap-2">
                       <FaRegCircleCheck className="mt-1 text-green-600 shrink-0" />
-                      <TextElement as="p">{item}</TextElement>
+                      <TextElement as="p" className="line-clamp-none">{item}</TextElement>
                     </Row>
                   ))}
                 </Row>

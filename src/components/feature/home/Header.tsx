@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <Row className="w-full justify-center max:h-[27vh] md:h-[70vh] relative overflow-hidden">
+    <Row className="w-full justify-center max:h-[27vh] md:h-[65vh] relative overflow-hidden">
       <Row className="w-[90%]   justify-between items-center ">
         <Row className=" w-[65%] md:w-[60%] items-end  pl-2 md:pl-3 gap-1 ">
           <AnimatedReact />
@@ -25,10 +25,12 @@ const Banner = () => {
 
             <TextElement
               as="p"
-              className="text-white line-clamp-4 text-start text-[10px] md:text-[16px] "
+              className="text-white line-clamp-none text-start text-[10px] md:text-[16px] "
             >
-              MERN Stack Specialist | Crafting Scalable & High-Performance Web
-              Solutions
+              Full-Stack MERN Developer | Building scalable SaaS platforms,
+              multi-tenant architectures, and real-time web applications. I
+              specialize in delivering high-performance, maintainable, and
+              production-ready solutions.
             </TextElement>
           </Row>
         </Row>
