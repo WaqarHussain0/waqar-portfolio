@@ -1,4 +1,3 @@
-import { TbPoint } from "react-icons/tb";
 import Row from "@/components/common/Row";
 import { PiDiamondsFourFill } from "react-icons/pi";
 
@@ -51,7 +50,7 @@ const ServicesSection: React.FC<IServicesSectionProps> = ({ services }) => {
               <Row className="w-full flex-col gap-2 mt-3">
                 {service.points.map((point, idx) => (
                   <Row key={idx} className="items-center w-full gap-2">
-                    <FaRegCircleCheck className="mt-1 text-green-600 shrink-0" />
+                    <FaRegCircleCheck className=" text-green-600 shrink-0" />
                     <CardDescription className="poppinsRegular ">
                       {point}
                     </CardDescription>

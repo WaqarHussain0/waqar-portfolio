@@ -6,6 +6,7 @@ import Row from "@/components/common/Row";
 import Navbar from "@/components/common/Navbar";
 import HeaderSection from "@/components/feature/home/Header";
 import ContactSection from "@/components/feature/home/Contant";
+import WhatsAppButton from "@/components/common/WhatsAppButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -88,6 +89,8 @@ export default function RootLayout({
             },
           }}
         />
+
+        <WhatsAppButton />
         <Row className="flex-col bg-[#e1ebed]">
           <Row className="flex-col w-full  bg-[#291c3a]">
             <Navbar className="" />

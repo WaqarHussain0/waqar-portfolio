@@ -1,5 +1,4 @@
 import {
-  DiJsBadge,
   DiNodejsSmall,
   DiMongodb,
   DiPostgresql,
@@ -14,6 +13,8 @@ import {
   SiRedux,
   SiNextdotjs,
   SiSocketdotio,
+  SiElectron,
+  SiShadcnui,
 } from "react-icons/si";
 
 import { GrMysql, GrGraphQl } from "react-icons/gr";
@@ -30,33 +31,38 @@ export interface ISkillCategory {
 
 const SkillsData: ISkillCategory[] = [
   {
-    title: "Frontend",
+    title: "Modern Frontend Systems",
     skills: [
-      { name: "JavaScript", icon: DiJsBadge },
-      { name: "TypeScript", icon: SiTypescript },
       { name: "React", icon: DiReact },
       { name: "Next.js", icon: SiNextdotjs },
       { name: "Redux", icon: SiRedux },
+      { name: "TypeScript", icon: SiTypescript },
       { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "ShadCN UI", icon: SiShadcnui },
     ],
   },
   {
-    title: "Backend",
+    title: "Scalable Backend & Real-Time Systems",
     skills: [
       { name: "Node.js", icon: DiNodejsSmall },
       { name: "Express", icon: SiExpress },
       { name: "NestJS", icon: SiNestjs },
-      { name: "Socket.IO", icon: SiSocketdotio },
       { name: "GraphQL", icon: GrGraphQl },
+      { name: "Socket.IO", icon: SiSocketdotio },
+    ],
+  },
+
+  {
+    title: "Database Architecture",
+    skills: [
+      { name: "MongoDB", icon: DiMongodb },
+      { name: "PostgreSQL", icon: DiPostgresql },
+      { name: "MySQL", icon: GrMysql },
     ],
   },
   {
-    title: "Database",
-    skills: [
-      { name: "MongoDB", icon: DiMongodb },
-      { name: "MySQL", icon: GrMysql },
-      { name: "PostgreSQL", icon: DiPostgresql },
-    ],
+    title: "Desktop & Cross-Platform Applications",
+    skills: [{ name: "Electron", icon: SiElectron }],
   },
 ];
 
