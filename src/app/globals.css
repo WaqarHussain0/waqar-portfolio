@@ -152,31 +152,18 @@
   }
 }
 
-@font-face {
-  font-family: cotoris;
-  src: url(../assets/fonts/CotorisBold.ttf);
-}
 .cotoris {
-  font-family: cotoris !important;
+  font-family: var(--font-cotoris);
 }
 
-@font-face {
-  font-family: poppins;
-  src: url(../assets/fonts/Poppins-Medium.ttf);
-}
 .poppins {
-  font-family: poppins;
+  font-family: var(--font-poppins);
 }
 
-@font-face {
-  font-family: poppinsRegular;
-  src: url(../assets/fonts/Poppins-Regular.ttf);
-}
 .poppinsRegular {
-  font-family: poppinsRegular;
+  font-family: var(--font-poppins);
+  font-weight: 400;
 }
-
-
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -188,8 +175,6 @@
   scrollbar-width: none;
   /* Firefox */
 }
-
-
 
 /* ===== Global Scrollbar Styles ===== */
 * {

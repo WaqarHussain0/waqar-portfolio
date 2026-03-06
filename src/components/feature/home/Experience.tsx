@@ -57,6 +57,8 @@ const ExperienceSection: React.FC<IExperienceSectionProps> = ({
                     alt={`${company.companyName} Logo`}
                     fill
                     className="object-contain"
+                    priority
+                    fetchPriority="high"
                   />
                 </div>
 
@@ -95,7 +97,7 @@ const ExperienceSection: React.FC<IExperienceSectionProps> = ({
                           {role.endDate ? (
                             role.endDate
                           ) : (
-                            <span className="text-green-600">Present</span>
+                            <span className="text-green-700">Present</span>
                           )}
                         </CardDescription>
                       </Row>

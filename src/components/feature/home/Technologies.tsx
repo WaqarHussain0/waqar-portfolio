@@ -47,7 +47,7 @@ const TechnologiesSection: React.FC<ITechnologiesSectionProps> = ({
                 {category.skills.map((skill) => (
                   <Card
                     key={skill.name}
-                    className="p-5 w-full flex-col items-center justify-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                    className="p-4 md:p-5 w-full flex-col items-center justify-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                   >
                     <skill.icon className="size-[30px] md:size-[35px] text-[#211F20]" />
                     <CardTitle className="text-sm md:text-base font-medium text-center">

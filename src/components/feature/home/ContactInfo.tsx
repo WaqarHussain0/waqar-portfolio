@@ -8,7 +8,7 @@ const ContactInfo = () => {
       {ContactData.map((val) => (
         <Row key={val.name} className="items-center gap-2 md:gap-4">
           <div className="flex justify-center items-center size-[30px] md:size-[40px] rounded-sm shadow-md border-y bg-white">
-            <val.icon className="size-[20px] md:size-[25px] text-[#8121d0]" />
+            <val.icon className={`size-[20px] md:size-[25px] text-[#8121d0]`} />
           </div>
 
           <Row className="flex-col items-start">

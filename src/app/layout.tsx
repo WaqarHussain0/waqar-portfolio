@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
 import Row from "@/components/common/Row";
@@ -8,14 +7,20 @@ import HeaderSection from "@/components/feature/home/Header";
 import ContactSection from "@/components/feature/home/Contant";
 import WhatsAppButton from "@/components/common/WhatsAppButton";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+import { Poppins } from "next/font/google";
+import localFont from "next/font/local";
+
+export const cotoris = localFont({
+  src: "../assets/fonts/CotorisBold.ttf",
+  variable: "--font-cotoris",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+export const poppins = Poppins({
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-poppins",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -71,9 +76,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${poppins.variable} ${cotoris.variable} antialiased`}>
         <Toaster
           position="bottom-right"
           richColors
@@ -91,13 +94,13 @@ export default function RootLayout({
         />
 
         <WhatsAppButton />
-        <Row className="flex-col bg-[#e1ebed]">
+        <Row className="flex-col justify-center bg-[#e1ebed]">
           <Row className="flex-col w-full  bg-[#291c3a]">
             <Navbar className="" />
             <HeaderSection />
           </Row>
 
-          <Row className="w-[98%] md:w-[90%] mt-4">{children}</Row>
+          <main className="w-[98%] md:w-[90%] mt-4">{children}</main>
           <ContactSection />
         </Row>
       </body>

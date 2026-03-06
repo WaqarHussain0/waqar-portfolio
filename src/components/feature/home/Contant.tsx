@@ -165,6 +165,7 @@ const ContactSection: React.FC<IContactSectionProps> = ({}) => {
 
               <Button
                 disabled={isLoading}
+                size={"sm"}
                 onClick={handleSubmit(onSubmit)}
                 className="bg-[#8121d0] hover:bg-[#8121d0c7] text-white"
               >

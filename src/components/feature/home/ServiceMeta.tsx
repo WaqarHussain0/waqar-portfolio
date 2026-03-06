@@ -4,17 +4,13 @@ import Row from "@/components/common/Row";
 import TextElement from "@/components/common/TextElement";
 import { Card, CardTitle } from "@/components/ui/card";
 import { PAGES_ROUTES } from "@/constants/page-route.constant";
-import { useRouter } from "next/navigation";
 import { PiDiamondsFourFill } from "react-icons/pi";
 import ServicesData from "@/assets/data/service.data";
+import Link from "next/link";
 
 const ServiceMeta = () => {
   const services = ServicesData;
-  const router = useRouter();
 
-  const handleViewAll = () => {
-    router.push(PAGES_ROUTES.SERVICES);
-  };
   return (
     <Row className="flex-col w-full space-y-3">
       <Row className="w-full justify-between items-end">
@@ -28,9 +24,13 @@ const ServiceMeta = () => {
             I provide a range of services to help you achieve your goals
           </TextElement>
         </Row>
-        <TextElement as="a" onClick={handleViewAll}>
+
+        <Link
+          href={PAGES_ROUTES.SERVICES}
+          className="cursor-pointer text-blue-800 poppinsRegular underline text-[10px] md:text-[16px]"
+        >
           View All
-        </TextElement>
+        </Link>
       </Row>
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {services.map((service) => (

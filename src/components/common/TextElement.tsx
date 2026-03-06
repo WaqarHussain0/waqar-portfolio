@@ -31,8 +31,8 @@ const defaultClasses: Record<TextVariants, string> = {
   blockquote: "",
   small: "",
   strong: "",
-  em: "s",
-  a: "cursor-pointer text-blue-800 poppinsRegular underline text-[10px] md:text-[16px] ",
+  em: "italic",
+  a: "cursor-pointer text-blue-800 poppinsRegular underline text-[10px] md:text-[16px]",
 };
 
 interface TextElementProps extends React.HTMLAttributes<HTMLElement> {

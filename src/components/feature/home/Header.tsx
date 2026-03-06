@@ -41,6 +41,9 @@ const Banner = () => {
             alt="Profile Pic"
             width={600}
             height={600}
+            sizes="(max-width: 768px) 35vw, 40vw"
+            priority
+            fetchPriority="high"
             className="w-full h-auto object-contain"
           />
         </div>

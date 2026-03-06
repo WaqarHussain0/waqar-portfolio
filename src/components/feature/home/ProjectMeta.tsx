@@ -6,7 +6,7 @@ import TextElement from "@/components/common/TextElement";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PAGES_ROUTES } from "@/constants/page-route.constant";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { PiDiamondsFourFill } from "react-icons/pi";
 
 interface IProjectMetaProps {
@@ -14,12 +14,6 @@ interface IProjectMetaProps {
 }
 
 const ProjectMeta: React.FC<IProjectMetaProps> = ({ projects }) => {
-  const router = useRouter();
-
-  const handleViewAll = () => {
-    router.push(PAGES_ROUTES.PROJECTS);
-  };
-  // PAGES_ROUTES
   return (
     <Row className="flex-col w-full space-y-3">
       <Row className="w-full justify-between items-end">
@@ -33,9 +27,13 @@ const ProjectMeta: React.FC<IProjectMetaProps> = ({ projects }) => {
             Here are some of the projects I've been working on recently
           </TextElement>
         </Row>
-        <TextElement as="a" onClick={handleViewAll}>
+
+        <Link
+          href={PAGES_ROUTES.PROJECTS}
+          className="cursor-pointer text-blue-800 poppinsRegular underline text-[10px] md:text-[16px]"
+        >
           View All
-        </TextElement>
+        </Link>
       </Row>
 
       <div className=" grid grid-cols-1 md:grid-cols-2 gap-3">
