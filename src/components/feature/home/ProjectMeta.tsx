@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import AnimatedIcon from "@/components/common/AnimatedIcon";
-import Row from "@/components/common/Row";
-import TextElement from "@/components/common/TextElement";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { PAGES_ROUTES } from "@/constants/page-route.constant";
-import Link from "next/link";
-import { PiDiamondsFourFill } from "react-icons/pi";
+import AnimatedIcon from '@/components/common/AnimatedIcon';
+import Row from '@/components/common/Row';
+import TextElement from '@/components/common/TextElement';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { PAGES_ROUTES } from '@/constants/page-route.constant';
+import Link from 'next/link';
+import { PiDiamondsFourFill } from 'react-icons/pi';
 
 interface IProjectMetaProps {
   projects: any[];
@@ -15,8 +15,8 @@ interface IProjectMetaProps {
 
 const ProjectMeta: React.FC<IProjectMetaProps> = ({ projects }) => {
   return (
-    <Row className="flex-col w-full space-y-3">
-      <Row className="w-full justify-between items-end">
+    <Row className="w-full flex-col space-y-3">
+      <Row className="w-full items-end justify-between">
         <Row className="flex-col items-start gap-1 text-[#291c3a]">
           <Row className="gap-2">
             <AnimatedIcon Icon={PiDiamondsFourFill} />
@@ -30,22 +30,22 @@ const ProjectMeta: React.FC<IProjectMetaProps> = ({ projects }) => {
 
         <Link
           href={PAGES_ROUTES.PROJECTS}
-          className="cursor-pointer text-blue-800 poppinsRegular underline text-[10px] md:text-[16px]"
+          className="poppinsRegular cursor-pointer text-[10px] text-blue-800 underline md:text-[16px]"
         >
           View All
         </Link>
       </Row>
 
-      <div className=" grid grid-cols-1 md:grid-cols-2 gap-3">
-        {projects.map((project) => (
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+        {projects.map(project => (
           <Card
             key={project.id}
-            className="w-full p-6 gap-3 rounded-2xl border border-gray-200 shadow-sm  group hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            className="group w-full gap-3 rounded-2xl border border-gray-200 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
           >
-            <CardHeader className="p-0 w-full ">
+            <CardHeader className="w-full p-0">
               {/* Title + Status + Description*/}
-              <Row className="w-full flex-col justify-between items-start gap-2 md:gap-0">
-                <Row className="w-full justify-between space-y-2 flex-col md:flex-row items-start ">
+              <Row className="w-full flex-col items-start justify-between gap-2 md:gap-0">
+                <Row className="w-full flex-col items-start justify-between space-y-2 md:flex-row">
                   <CardTitle className="text-base text-[#291c3a]">
                     {project.name}
                   </CardTitle>
@@ -57,11 +57,11 @@ const ProjectMeta: React.FC<IProjectMetaProps> = ({ projects }) => {
               </Row>
             </CardHeader>
 
-            <CardContent className="p-0 m-0">
+            <CardContent className="m-0 p-0">
               {/* Tech Stack */}
-              <Row className="flex-wrap gap-2 mt-3">
+              <Row className="mt-3 flex-wrap gap-2">
                 {project.techStacks.map((tech: string) => (
-                  <Badge key={tech} variant={"outline"}>
+                  <Badge key={tech} variant={'outline'}>
                     {tech}
                   </Badge>
                 ))}

@@ -3,7 +3,7 @@ import {
   DiMongodb,
   DiPostgresql,
   DiReact,
-} from "react-icons/di";
+} from 'react-icons/di';
 
 import {
   SiTailwindcss,
@@ -15,9 +15,9 @@ import {
   SiSocketdotio,
   SiElectron,
   SiShadcnui,
-} from "react-icons/si";
+} from 'react-icons/si';
 
-import { GrMysql, GrGraphQl } from "react-icons/gr";
+import { GrMysql, GrGraphQl } from 'react-icons/gr';
 
 export interface ISkillData {
   name: string;
@@ -31,38 +31,38 @@ export interface ISkillCategory {
 
 const SkillsData: ISkillCategory[] = [
   {
-    title: "Modern Frontend Systems",
+    title: 'Modern Frontend Systems',
     skills: [
-      { name: "React", icon: DiReact },
-      { name: "Next.js", icon: SiNextdotjs },
-      { name: "Redux", icon: SiRedux },
-      { name: "TypeScript", icon: SiTypescript },
-      { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "ShadCN UI", icon: SiShadcnui },
+      { name: 'React', icon: DiReact },
+      { name: 'Next.js', icon: SiNextdotjs },
+      { name: 'Redux', icon: SiRedux },
+      { name: 'TypeScript', icon: SiTypescript },
+      { name: 'Tailwind CSS', icon: SiTailwindcss },
+      { name: 'ShadCN UI', icon: SiShadcnui },
     ],
   },
   {
-    title: "Scalable Backend & Real-Time Systems",
+    title: 'Scalable Backend & Real-Time Systems',
     skills: [
-      { name: "Node.js", icon: DiNodejsSmall },
-      { name: "Express", icon: SiExpress },
-      { name: "NestJS", icon: SiNestjs },
-      { name: "GraphQL", icon: GrGraphQl },
-      { name: "Socket.IO", icon: SiSocketdotio },
+      { name: 'Node.js', icon: DiNodejsSmall },
+      { name: 'Express', icon: SiExpress },
+      { name: 'NestJS', icon: SiNestjs },
+      { name: 'GraphQL', icon: GrGraphQl },
+      { name: 'Socket.IO', icon: SiSocketdotio },
     ],
   },
 
   {
-    title: "Database Architecture",
+    title: 'Database Architecture',
     skills: [
-      { name: "MongoDB", icon: DiMongodb },
-      { name: "PostgreSQL", icon: DiPostgresql },
-      { name: "MySQL", icon: GrMysql },
+      { name: 'MongoDB', icon: DiMongodb },
+      { name: 'PostgreSQL', icon: DiPostgresql },
+      { name: 'MySQL', icon: GrMysql },
     ],
   },
   {
-    title: "Desktop & Cross-Platform Applications",
-    skills: [{ name: "Electron", icon: SiElectron }],
+    title: 'Desktop & Cross-Platform Applications',
+    skills: [{ name: 'Electron', icon: SiElectron }],
   },
 ];
 

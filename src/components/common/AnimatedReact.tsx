@@ -1,14 +1,14 @@
-import { DiReact } from "react-icons/di";
-import Row from "./Row";
+import { DiReact } from 'react-icons/di';
+import Row from './Row';
 
 const AnimatedReact = () => {
   return (
     <Row className="flex-col items-center gap-1">
-      <div className=" bg-[#8121d0] bg-opacity-15  size-[20px] md:size-[40px] rounded-full flex justify-center items-center">
-        <DiReact className="animate-spin text-white text-opacity-45 size-[15px] md:size-[30px]" />
+      <div className="bg-opacity-15 flex size-[20px] items-center justify-center rounded-full bg-[#8121d0] md:size-[40px]">
+        <DiReact className="text-opacity-45 size-[15px] animate-spin text-white md:size-[30px]" />
       </div>
 
-      <div className="border-l-[5px] md:border-l-[8px] border-double  border-[#8121d0] h-[150px] md:h-[200px]" />
+      <div className="h-[150px] border-l-[5px] border-double border-[#8121d0] md:h-[200px] md:border-l-[8px]" />
     </Row>
   );
 };

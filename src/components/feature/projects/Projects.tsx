@@ -1,30 +1,30 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import ProjectsData from "@/assets/data/project.data";
-import AnimatedIcon from "@/components/common/AnimatedIcon";
-import Row from "@/components/common/Row";
-import TextElement from "@/components/common/TextElement";
-import { Badge } from "@/components/ui/badge";
+import { useState } from 'react';
+import ProjectsData from '@/assets/data/project.data';
+import AnimatedIcon from '@/components/common/AnimatedIcon';
+import Row from '@/components/common/Row';
+import TextElement from '@/components/common/TextElement';
+import { Badge } from '@/components/ui/badge';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { PiDiamondsFourFill } from "react-icons/pi";
-import { FaRegCircleCheck } from "react-icons/fa6";
+} from '@/components/ui/card';
+import { PiDiamondsFourFill } from 'react-icons/pi';
+import { FaRegCircleCheck } from 'react-icons/fa6';
 
 const ProjectSection = () => {
   const [expandedId, setExpandedId] = useState<number | null>(null);
 
   return (
-    <Row className="flex-col w-full space-y-3">
+    <Row className="w-full flex-col space-y-3">
       <Row className="items-center gap-3 text-[#291c3a]">
         <AnimatedIcon Icon={PiDiamondsFourFill} />
 
-        <Row className="flex-col gap-2 items-start md:items-center">
+        <Row className="flex-col items-start gap-2 md:items-center">
           <TextElement as="h2">Projects</TextElement>
           <TextElement as="p">
             Here are some of the projects I've been working on recently
@@ -32,8 +32,8 @@ const ProjectSection = () => {
         </Row>
       </Row>
 
-      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-3">
-        {ProjectsData.map((project) => {
+      <div className="grid w-full grid-cols-1 gap-3 lg:grid-cols-2">
+        {ProjectsData.map(project => {
           const isExpanded = expandedId === project.id;
           const visibleContributions = isExpanded
             ? project.contributions
@@ -42,11 +42,11 @@ const ProjectSection = () => {
           return (
             <Card
               key={project.id}
-              className="w-full p-6 gap-3 rounded-2xl border border-gray-200 shadow-sm group hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              className="group w-full gap-3 rounded-2xl border border-gray-200 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
-              <CardHeader className="p-0 w-full">
-                <Row className="w-full flex-col justify-between items-start gap-2">
-                  <Row className="w-full justify-between flex-col md:flex-row items-start md:items-center gap-2">
+              <CardHeader className="w-full p-0">
+                <Row className="w-full flex-col items-start justify-between gap-2">
+                  <Row className="w-full flex-col items-start justify-between gap-2 md:flex-row md:items-center">
                     <CardTitle className="text-base text-[#291c3a]">
                       {project.name}
                     </CardTitle>
@@ -58,11 +58,11 @@ const ProjectSection = () => {
                 </Row>
               </CardHeader>
 
-              <CardContent className="p-0 space-y-3">
+              <CardContent className="space-y-3 p-0">
                 {/* Contributions */}
                 <TextElement
                   as="h4"
-                  className="text-[#291c3a] poppins text-sm font-semibold"
+                  className="poppins text-sm font-semibold text-[#291c3a]"
                 >
                   Contributions:
                 </TextElement>
@@ -70,7 +70,7 @@ const ProjectSection = () => {
                 <Row className="flex-col items-start gap-2 text-sm text-gray-600 transition-all duration-300">
                   {visibleContributions.map((item, index) => (
                     <Row key={index} className="w-full gap-2">
-                      <FaRegCircleCheck className="mt-1 text-green-600 shrink-0" />
+                      <FaRegCircleCheck className="mt-1 shrink-0 text-green-600" />
                       <TextElement as="p" className="line-clamp-none">
                         {item}
                       </TextElement>
@@ -86,13 +86,13 @@ const ProjectSection = () => {
                     }
                     className="cursor-pointer text-sm font-medium text-purple-600 hover:underline"
                   >
-                    {isExpanded ? "View Less" : "View More"}
+                    {isExpanded ? 'View Less' : 'View More'}
                   </button>
                 )}
 
                 {/* Tech Stack */}
-                <Row className="flex-wrap gap-2 mt-3">
-                  {project.techStacks.map((tech) => (
+                <Row className="mt-3 flex-wrap gap-2">
+                  {project.techStacks.map(tech => (
                     <Badge key={tech} variant="secondary">
                       {tech}
                     </Badge>

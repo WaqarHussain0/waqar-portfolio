@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface AnimatedIconProps {
   Icon: React.ComponentType<{ size?: number; className?: string }>;
@@ -13,8 +13,8 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({
 }) => {
   return (
     <Icon
-      className={`text-[#8121d0] w-[15px] h-[15px] md:w-[25px] md:h-[25px] ${
-        animateIcon ? "animate-bounce" : ""
+      className={`h-[15px] w-[15px] text-[#8121d0] md:h-[25px] md:w-[25px] ${
+        animateIcon ? 'animate-bounce' : ''
       } ${className}`}
     />
   );
