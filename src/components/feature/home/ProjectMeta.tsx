@@ -1,5 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
+
 'use client';
 
+import { IProject } from '@/assets/data/project.data';
 import AnimatedIcon from '@/components/common/AnimatedIcon';
 import Row from '@/components/common/Row';
 import TextElement from '@/components/common/TextElement';
@@ -10,7 +13,7 @@ import Link from 'next/link';
 import { PiDiamondsFourFill } from 'react-icons/pi';
 
 interface IProjectMetaProps {
-  projects: any[];
+  projects: IProject[];
 }
 
 const ProjectMeta: React.FC<IProjectMetaProps> = ({ projects }) => {

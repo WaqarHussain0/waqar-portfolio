@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+
 import Row from '@/components/common/Row';
 
 import TextElement from '@/components/common/TextElement';

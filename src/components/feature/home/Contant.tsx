@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 'use client';
 import AnimatedIcon from '@/components/common/AnimatedIcon';
 import Row from '@/components/common/Row';

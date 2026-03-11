@@ -1,3 +1,12 @@
+export interface IProject {
+  id: string;
+  name: string;
+  role: string;
+  description: string;
+  techStacks: string[];
+  contributions: string[];
+}
+
 const ProjectsData = [
   {
     id: 1,

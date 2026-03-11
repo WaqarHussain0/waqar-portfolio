@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+
 import Row from '@/components/common/Row';
 
 import { GrTechnology } from 'react-icons/gr';
