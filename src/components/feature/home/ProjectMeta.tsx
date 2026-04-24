@@ -39,8 +39,8 @@ const ProjectMeta: React.FC<IProjectMetaProps> = ({ projects }) => {
         </Link>
       </Row>
 
-      <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
-        {projects.map(project => (
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
+        {projects.slice(0, 6).map(project => (
           <Card
             key={project.id}
             className="group w-full gap-3 rounded-2xl border border-gray-200 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
@@ -48,7 +48,7 @@ const ProjectMeta: React.FC<IProjectMetaProps> = ({ projects }) => {
             <CardHeader className="w-full p-0">
               {/* Title + Status + Description*/}
               <Row className="w-full flex-col items-start justify-between gap-2 md:gap-0">
-                <Row className="w-full flex-col items-start justify-between space-y-2 md:flex-row">
+                <Row className="w-full flex-col items-start justify-between space-y-2">
                   <CardTitle className="text-base text-[#291c3a]">
                     {project.name}
                   </CardTitle>

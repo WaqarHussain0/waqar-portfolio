@@ -10,8 +10,64 @@ export interface IProject {
 const ProjectsData = [
   {
     id: 1,
-    name: 'Vanir Volcano – Internal Construction ERP Transformation',
-    role: 'Lead Full-Stack Engineer',
+    name: 'Trading Simulation Platform - Desktop App (Electron)',
+    role: 'Full-Stack Developer',
+    description:
+      'A cross-platform desktop trading simulation built for financial training institutions, enabling instructors to run real-market workflows with zero financial risk.',
+    techStacks: ['Electron', 'React.js', 'TypeScript', 'Node.js', 'PostgreSQL'],
+    contributions: [
+      'Architected the full application from scratch using Electron + React, designing both the desktop shell and the trading interface.',
+      'Built a real-time market data simulation engine, replicating live order books, price ticks, and portfolio tracking.',
+      'Implemented role-based access — instructors control sessions while students trade in isolated sandboxes simultaneously.',
+      'Integrated a performance dashboard for instructors to review student decisions and outcomes post-session.',
+      'Reduced student onboarding time for real-market training workflows significantly — allowing institutions to run structured trading sessions without any financial exposure or third-party platform dependency.',
+    ],
+  },
+
+  {
+    id: 2,
+    name: 'Accred - Event Management Platform',
+    role: 'Full-Stack Developer',
+    description:
+      'A large-scale event management platform built for stadiums and media organizations, streamlining staff coordination and operational setup for high-attendance events.',
+    techStacks: ['React.js', 'NestJS', 'PostgreSQL', 'Node.js', 'TypeScript'],
+    contributions: [
+      'Engineered a CSV-based bulk staff onboarding system, allowing event managers to import and assign hundreds of personnel in a single upload.',
+      'Built role-specific access flows for stadium staff, media teams, and administrators — each with tailored dashboards and permissions.',
+      'Developed the backend API layer handling staff records, event scheduling, and credential management.',
+      'Implemented validation and error-reporting on CSV imports to ensure data integrity at scale.',
+      'Cut manual event setup time by 60% — enabling operations teams to onboard large volumes of staff in minutes rather than hours.',
+    ],
+  },
+
+  {
+    id: 3,
+    name: 'Tickato - Multi-Tenant SaaS Ticketing Platform',
+    role: 'Full-Stack Developer',
+    description:
+      'A scalable multi-tenant SaaS ticketing system serving multiple enterprise clients simultaneously — each with fully isolated data, branding, and infrastructure configuration.',
+    techStacks: [
+      'Next.js',
+      'React.js',
+      'NestJS',
+      'PostgreSQL',
+      'MongoDB',
+      'Azure',
+      'TypeScript',
+    ],
+    contributions: [
+      'Architected the multi-tenancy layer with tenant-isolated PostgreSQL databases, ensuring zero data bleed between clients.',
+      'Built three separate applications: Admin portal, Customer-facing ticketing app, and Backend management dashboard.',
+      'Designed per-tenant Azure storage configurations and white-label email delivery pipelines, allowing each client to operate under their own brand.',
+      'Developed a Custom Email Template Editor enabling clients to design and manage transactional emails without engineering support.',
+      'Built a Dynamic Ticket Editor for per-event ticket customization — layouts, fields, and branding all configurable per client.',
+      'Reduced time-to-launch for new tenants by eliminating manual setup dependencies, with the platform supporting multiple enterprise clients concurrently with full data isolation.',
+    ],
+  },
+  {
+    id: 4,
+    name: 'Vanir Volcano - Internal Construction ERP Transformation',
+    role: 'Full-Stack Developer',
     description:
       'Designed and delivered a production-grade internal ERP platform replacing Excel-based estimation workflows. The system centralized vendor management, construction planning, takeoffs, and reporting while enforcing strict role-based access control to protect operational data.',
     techStacks: [
@@ -36,7 +92,7 @@ const ProjectsData = [
   },
 
   {
-    id: 2,
+    id: 5,
     name: 'High-Performance Server-Side Grid Engine (AG Grid Optimization)',
     role: 'Full-Stack Engineer',
     description:
@@ -53,8 +109,8 @@ const ProjectsData = [
   },
 
   {
-    id: 3,
-    name: 'PureCS – Rule-Based Lab Report Automation Platform',
+    id: 6,
+    name: 'PureCS - Rule-Based Lab Report Automation Platform',
     role: 'Full-Stack Engineer',
     description:
       'Contributed to an intranet healthcare system enabling automated processing of patient lab reports through CSV/XLS ingestion, rule-based validation, and real-time analytics dashboards.',
@@ -76,7 +132,7 @@ const ProjectsData = [
   },
 
   {
-    id: 4,
+    id: 7,
     name: 'Medical Equipment Real-Time Tracking & Audit System',
     role: 'Full-Stack Engineer',
     description:
@@ -102,8 +158,8 @@ const ProjectsData = [
   },
 
   {
-    id: 5,
-    name: 'MMA – HIPAA-Compliant Patient Management Platform',
+    id: 8,
+    name: 'MMA - HIPAA-Compliant Patient Management Platform',
     role: 'Backend Engineer',
     description:
       'Contributed to a mature HIPAA-compliant healthcare platform supporting ADHD patient management, appointment scheduling, and secure medical record integrations.',
@@ -118,8 +174,8 @@ const ProjectsData = [
   },
 
   {
-    id: 6,
-    name: 'Racepark – Real-Time Multiplayer Scoring & Event Engine',
+    id: 9,
+    name: 'Racepark - Real-Time Multiplayer Scoring & Event Engine',
     role: 'Full-Stack Engineer',
     description:
       'Developed a real-time racing statistics and scoring system deployed across multiple Racepark venues, processing live gameplay events and broadcasting instant score updates to players and administrators.',
