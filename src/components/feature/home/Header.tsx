@@ -1,23 +1,19 @@
-/* eslint-disable react/no-unescaped-entities */
-
 import Row from '@/components/common/Row';
 
 import TextElement from '@/components/common/TextElement';
 import AnimatedReact from '@/components/common/AnimatedReact';
+import { Button } from '@/components/ui/button';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Banner = () => {
   return (
-    <Row className="max:h-[27vh] relative w-full justify-center overflow-hidden md:h-[65vh]">
+    <Row className="relative h-[21vh] w-full justify-center overflow-hidden md:h-[45vh] md:py-0 lg:h-[75vh]">
       <Row className="w-[90%] items-center justify-between">
         <Row className="w-[65%] items-end gap-1 pl-2 md:w-[60%] md:pl-3">
           <AnimatedReact />
 
-          <Row className="flex-col items-start">
-            <TextElement as="p" className="text-[10px] text-[#e1ebed]">
-              Hello 👋, I'm
-            </TextElement>
-
+          <Row className="flex-col items-start gap-3">
             <TextElement
               as="h2"
               className="cotoris name-animation border-none text-[22px] font-light! text-[#8121d0] md:text-[50px] lg:text-[60px]"
@@ -26,14 +22,47 @@ const Banner = () => {
             </TextElement>
 
             <TextElement
-              as="p"
-              className="line-clamp-none text-start text-[10px] text-white md:text-[16px]"
+              as="h3"
+              className="poppins line-clamp-none text-start text-[12px] font-medium text-white md:text-[30px]"
             >
-              Full-Stack MERN Developer | Building scalable SaaS platforms,
-              multi-tenant architectures, and real-time web applications. I
-              specialize in delivering high-performance, maintainable, and
-              production-ready solutions.
+              Full-Stack Software Engineer
             </TextElement>
+
+            <TextElement
+              as="p"
+              className="line-clamp-none text-start text-[8px] text-[#e1ebed] md:text-[15px]"
+            >
+              Building multi-tenant SaaS platforms in production. I own
+              full-stack systems end-to-end - from tenant-isolated databases to
+              shared infrastructure used across multiple applications.
+            </TextElement>
+
+            <Row className="flex-wrap gap-2 md:gap-3">
+              <Button
+                asChild
+                size={"sm"}
+                className="bg-[#8121d0] text-white hover:bg-[#8121d0c7]"
+              >
+                <a href="#selected-work">View Work</a>
+              </Button>
+
+              <Button
+                asChild
+                variant="outline"
+                className="border-white/40 bg-transparent text-white hover:bg-white/10 hover:text-white"
+              
+                size={"sm"}
+              >
+
+                <Link
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Resume
+                </Link>
+              </Button>
+            </Row>
           </Row>
         </Row>
 

@@ -1,3 +1,11 @@
+export interface ICaseStudy {
+  context: string;
+  role: string;
+  architecture: string;
+  engineeringDecision?: string;
+  status: string;
+}
+
 export interface IProject {
   id: number;
   name: string;
@@ -5,9 +13,31 @@ export interface IProject {
   description: string;
   techStacks: string[];
   contributions: string[];
+  caseStudy?: ICaseStudy;
 }
 
-const ProjectsData = [
+const ProjectsData: IProject[] = [
+  {
+    id: 0,
+    name: 'Friday — Multi-Tenant SaaS for Food & Retail Chains',
+    role: 'Full-Stack Owner — Admin Console & POS',
+    description:
+      'In-house SaaS product letting food and retail chains manage multiple stores, menus, and terminals under one account.',
+    techStacks: ['React', 'Electron', 'Next.js'],
+    contributions: [],
+    caseStudy: {
+      context:
+        'In-house SaaS product letting food and retail chains manage multiple stores, menus, and terminals under one account.',
+      role: 'Full-stack owner of the admin/tenant-onboarding console and the POS (React + Electron); also contributing to the HQ-App (Next.js). Part of a 5-engineer product team.',
+      architecture:
+        'Designed and built a shared email-template and notification system consumed by both the admin console and the tenant-facing back-office app, avoiding duplicated logic per application.',
+      engineeringDecision:
+        'After identifying performance, functional, and scalability gaps in v1 — particularly around adapting the platform per tenant — leading the v2 redesign.',
+      status:
+        '5 pilot tenants live, architected to onboard additional franchise-style clients.',
+    },
+  },
+
   {
     id: 1,
     name: 'Trading Simulation Platform - Desktop App (Electron)',

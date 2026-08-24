@@ -4,6 +4,7 @@ import { Toaster } from 'sonner';
 import Row from '@/components/common/Row';
 import Navbar from '@/components/common/Navbar';
 import HeaderSection from '@/components/feature/home/Header';
+import ProofStrip from '@/components/feature/home/ProofStrip';
 import ContactSection from '@/components/feature/home/Contant';
 import WhatsAppButton from '@/components/common/WhatsAppButton';
 
@@ -24,28 +25,27 @@ export const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Waqar Hussain | Full-Stack MERN Developer',
+  title: 'Waqar Hussain | Full-Stack Software Engineer',
   description:
-    'Waqar Hussain is a Full-Stack MERN Developer building scalable SaaS platforms, multi-tenant architectures, and real-time web applications.',
+    'Waqar Hussain — Full-Stack Software Engineer building multi-tenant SaaS platforms (Tickato, Friday) and real-time systems in production.',
   keywords: [
-    'MERN Stack Developer',
+    'Full-Stack Software Engineer',
     'React.js',
     'Next.js',
     'Node.js',
     'NestJS',
     'Tailwind CSS',
-    'Full-Stack Web Developer',
-    'SaaS Applications',
-    'ERP Systems',
-    'Real-Time Applications',
+    'Multi-Tenant SaaS',
+    'Real-Time Systems',
+    'TypeScript',
   ],
   authors: [
     { name: 'Waqar Hussain', url: 'https://waqar-portfolio-azure.vercel.app' },
   ],
   openGraph: {
-    title: 'Waqar Hussain | MERN Developer',
+    title: 'Waqar Hussain | Full-Stack Software Engineer',
     description:
-      'Full-Stack MERN Developer building scalable SaaS platforms, multi-tenant architectures, and real-time applications.',
+      'Full-Stack Software Engineer building multi-tenant SaaS platforms and real-time systems in production.',
     url: 'https://waqar-portfolio-azure.vercel.app',
     siteName: 'Waqar Hussain Portfolio',
     images: [
@@ -61,9 +61,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Waqar Hussain | MERN Developer',
+    title: 'Waqar Hussain | Full-Stack Software Engineer',
     description:
-      'Full-Stack MERN Developer building scalable SaaS platforms, multi-tenant architectures, and real-time applications.',
+      'Full-Stack Software Engineer building multi-tenant SaaS platforms and real-time systems in production.',
     creator: '@waqarhussain',
     images: ['/waqar.png'],
   },
@@ -99,6 +99,8 @@ export default function RootLayout({
             <Navbar className="" />
             <HeaderSection />
           </Row>
+
+          <ProofStrip />
 
           <main className="mt-4 w-[98%] md:w-[90%]">{children}</main>
           <ContactSection />

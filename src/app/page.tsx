@@ -5,12 +5,11 @@ import ExperienceSection from '@/components/feature/home/Experience';
 import TechnologiesSection from '@/components/feature/home/Technologies';
 import ProjectsData from '@/assets/data/project.data';
 import ProjectMeta from '@/components/feature/home/ProjectMeta';
-import ServiceMeta from '@/components/feature/home/ServiceMeta';
 
 export const metadata = {
   title: 'Home | Waqar Hussain Portfolio',
   description:
-    "Hi, I'm Waqar Hussain – Full-Stack MERN Developer building scalable web apps, SaaS platforms, and real-time systems.",
+    'Waqar Hussain - Full-Stack Software Engineer building multi-tenant SaaS platforms and real-time systems in production.',
 };
 
 const Page = () => {
@@ -19,7 +18,6 @@ const Page = () => {
       <Row className="w-[98%] flex-col space-y-4 md:w-full">
         <TechnologiesSection skills={SkillsData} />
         <ExperienceSection experiences={ExperienceData} />
-        <ServiceMeta />
         <ProjectMeta projects={ProjectsData} />
       </Row>
     </Row>

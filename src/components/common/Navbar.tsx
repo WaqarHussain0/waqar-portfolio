@@ -17,7 +17,6 @@ const Navbar: React.FC<INavbarProps> = ({ className }) => {
   const menu = [
     { page: 'Home', sectionId: '#/', linkTo: PAGES_ROUTES.HOME },
     { page: 'Projects', sectionId: '#service', linkTo: PAGES_ROUTES.PROJECTS },
-    { page: 'Service', sectionId: '#service', linkTo: PAGES_ROUTES.SERVICES },
   ];
 
   return (
